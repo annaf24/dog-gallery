@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея собачек</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header class="header">
@@ -22,13 +23,15 @@
     </footer>
     <!-- Шаблон карточки изображения -->
     <template id="gallery-image-template">
-        <img class="gallery__image" src="" alt="Изображение собаки" />
+        <li class="image__item">
+            <img class="gallery__image" src="" alt="Изображение собаки" />
+        </li> 
     </template>
-    
+
     <!-- Модальное окно -->
     <div class="modal">
         <div class="modal__content">
-            <img src="" alt="Большое изображение собаки" class="modal__image">
+            <img class="modal__image" src="" alt="Большое изображение собаки">
             <a href="#" class="modal__download">Скачать</a>
             <button class="modal__close" aria-label="Закрыть">Закрыть</button>
         </div>
