@@ -1,13 +1,14 @@
+import { openModal } from "./modal.js";
 const imageTemplate = document.querySelector('#gallery-image-template').content;
 
-export function createImage(imageData, openModal) {
-    const imageElement = imageTemplate.querySelector('.image__item').cloneNode(true);
-    const image = imageElement.querySelector('image');
+export function createImage(url) {
+    const imageElement = imageTemplate.querySelector('.gallery__item').cloneNode(true);
+    const image = imageElement.querySelector('.gallery__image');
 
-    image.alt = imageData.alt;
-    image.src = imageData.src;
+    // image.alt = 'Собака';
+    image.src = url;
 
-    image.addEventListener('click', () => openModal(imageData.alt, imageData.src));
+    image.addEventListener('click', () => openModal(url));
 
     return imageElement;
 }

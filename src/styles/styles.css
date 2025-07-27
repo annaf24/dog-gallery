@@ -18,12 +18,37 @@ img {
   width: 100%;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* Header */
 .header {
     background-color: #000000;
     color: #FFFFFF;
 }
 /* Main */
+.gallery__list {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 650px;
+    overflow: hidden;
+}
+
+.gallery__item {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.gallery__image {
+    object-fit: contain;
+}
 /* Footer */
 .footer {
     background-color: #000000;

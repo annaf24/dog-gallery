@@ -1,14 +1,32 @@
 // DOM-ЭЛЕМЕНТЫ
+
+import { getDogImage } from "./api.js";
+import { createImage } from "./image.js";
+
 //Общий контейнер
-const gallery = document.querySelector('.gallery');
-//Модальное окно
-const modal = document.querySelector('.modal');
-const modalImage = modal.querySelector('.midal__image');
-const downloadLink = modal.querySelector('.modal__download');
-const closeButton = modal.querySelector('.modal__close');
+const gallery = document.querySelector('.gallery__list');
 
 const IMAGE_LIMIT = 9;
 
-function addImage() {}
-function openModal() {}
-function closemodal() {}
+async function addImage() {
+    const url = await getDogImage();
+    console.log('Полученный URL:', url);
+
+    if (!url) return;
+    const imageElement = createImage(url);
+
+    gallery.appendChild(imageElement);
+
+    if (gallery.children.length >= IMAGE_LIMIT) {
+        gallery.removeChild(gallery.firstChild);
+    }
+}
+
+
+// setInterval(addImage, 3000);
+// addImage();
+// addImage();
+// addImage();
+// addImage();
+// addImage();
+// addImage();

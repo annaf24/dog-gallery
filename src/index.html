@@ -10,10 +10,9 @@
     <header class="header">
         <h1 class="header__title">Галерея фотокарточек собак</h1>
     </header>
-    <main class="content">
-        <section class="gallery">
-
-        </section>
+    <main class="gallery">
+        <ul class="gallery__list">
+        </ul>
     </main>
     <footer class="footer">
         <p class="footer__text">
@@ -23,7 +22,7 @@
     </footer>
     <!-- Шаблон карточки изображения -->
     <template id="gallery-image-template">
-        <li class="image__item">
+        <li class="gallery__item">
             <img class="gallery__image" src="" alt="Изображение собаки" />
         </li> 
     </template>
@@ -36,6 +35,6 @@
             <button class="modal__close" aria-label="Закрыть">Закрыть</button>
         </div>
     </div>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/app.js" type="module"></script>
 </body>
 </html>
