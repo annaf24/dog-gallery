@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея собачек/title>
+    <title>Галерея собачек</title>
 </head>
 <body>
+    <header class="header">
+        <h1 class="header__title">Галерея фотокарточек собак</h1>
+    </header>
+    <main class="content">
+        <section class="gallery">
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">
+            Источник изображений:
+            <a href="https://dog.ceo" target="_blank">Dog API</a>
+        </p>
+    </footer>
+    <!-- Шаблон карточки изображения -->
+    <template id="gallery-image-template">
+        <img class="gallery__image" src="" alt="Изображение собаки" />
+    </template>
+    
+    <!-- Модальное окно -->
+    <div class="modal">
+        <div class="modal__content">
+            <img src="" alt="Большое изображение собаки" class="modal__image">
+            <a href="#" class="modal__download">Скачать</a>
+            <button class="modal__close" aria-label="Закрыть">Закрыть</button>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
