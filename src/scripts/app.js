@@ -7,14 +7,13 @@ import { isModalCurrentlyOpen } from "./modal.js";
 const gallery = document.querySelector('.gallery__list');
 
 // Макимальное количество изображений на странице
-const IMAGE_LIMIT = 20;
+const IMAGE_LIMIT = 24;
 
 // Добавление изображений на страницу
 async function addImage() {
     if (isModalCurrentlyOpen()) return;
 
     const url = await getDogImage();
-    console.log('Полученный URL:', url);
 
     if (!url) return;
     const imageElement = createImage(url);
@@ -26,19 +25,7 @@ async function addImage() {
     }
 }
 // Установка интервала в 3с для загрузки изображений на страницу
-// setInterval(addImage, 3000);
-addImage();
-addImage();
-addImage();
-addImage();
-addImage();
-addImage();
-addImage();
+setInterval(addImage, 3000);
 
-
-addImage();
-addImage();
-addImage();
-addImage();addImage();addImage();
 
 
