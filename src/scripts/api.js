@@ -6,12 +6,12 @@ export async function getDogImage() {
         const data = await response.json();
 
         if  (data.status !== 'success') {
-            throw new Error('Ошибка');
+            throw new Error(data.message);
         }
         return data.message;
 
     } catch (error) {
-        console.error('Ошибка загрузки изображения', error);
+        console.error('Ошибка загрузки изображения', error.message);
         return null;
     }
 }
