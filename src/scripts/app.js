@@ -2,14 +2,10 @@ import { getDogImage } from "./api.js";
 import { createImage } from "./image.js";
 import { isModalCurrentlyOpen } from "./modal.js";
 
-// DOM-ЭЛЕМЕНТЫ
-//Общий контейнер
 const gallery = document.querySelector('.gallery__list');
 
-// Макимальное количество изображений на странице
 const IMAGE_LIMIT = 24;
 
-// Добавление изображений на страницу
 async function addImage() {
     if (isModalCurrentlyOpen()) return;
 
@@ -24,7 +20,7 @@ async function addImage() {
         gallery.removeChild(gallery.firstChild);
     }
 }
-// Установка интервала в 3с для загрузки изображений на страницу
+
 setInterval(addImage, 3000);
 
 

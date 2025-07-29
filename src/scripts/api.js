@@ -1,4 +1,4 @@
-const API = 'https://dog.ceo/api/breed/corgi/images/random';
+const API = 'https://dog.ceo/api/breeds/image/random';
 
 export async function getDogImage() {
     try {

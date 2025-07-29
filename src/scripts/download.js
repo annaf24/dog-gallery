@@ -1,4 +1,3 @@
-// Загрузка изображения
 export function downloadImage(url) {
     fetch(url)
     .then(response => response.blob())
